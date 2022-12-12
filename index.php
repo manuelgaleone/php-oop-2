@@ -50,7 +50,7 @@ require_once __DIR__ . "/database/db.php";
                             <div class="card-body text-center">
                                 <h2 class="card-title"><?php echo $product->name ?></h2>
                                 <h3><?php echo $product->category->Name ?></h3>
-                                <h4><?php echo $product->ProductType ?></h4>
+                                <h4><?php echo $product->kcal ?></h4>
                                 <p class="card-text"><?php echo $product->description ?></p>
                             </div>
                         </div>

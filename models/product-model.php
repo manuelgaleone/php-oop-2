@@ -16,11 +16,11 @@ class Product
 
 class FoodProduct
 {
-    public function __construct(public String $name, public String $description, public Category $category, public String $ProductType, public String $productHref)
+    public function __construct(public String $name, public String $description, public Category $category, public String $Kcal, public String $productHref)
     {
         $this->name = $name;
         $this->description = $description;
-        $this->type = $ProductType;
+        $this->kcal = $Kcal;
         $this->productHref = $productHref;
     }
 }
