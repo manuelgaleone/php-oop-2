@@ -58,9 +58,9 @@ $products = [
                     <?php foreach ($products as $product) : ?>
                         <div class="card m-2" style="width: 18rem;">
                             <img src="<?php echo $product->productHref ?>">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $product->name ?></h5>
-                                <h3><?php echo $product->$category ?></h3>
+                            <div class="card-body text-center">
+                                <h2 class="card-title"><?php echo $product->name ?></h2>
+                                <h3><?php echo $product->category->Name ?></h3>
                                 <h4><?php echo $product->ProductType ?></h4>
                                 <p class="card-text"><?php echo $product->description ?></p>
                             </div>
