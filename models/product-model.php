@@ -1,7 +1,20 @@
 <?php
 
-//Modello di Prodotto
+require_once __DIR__ . "/category-model.php";
+
+/* //Modello di Prodotto
 class Product
+{
+    public function __construct(public String $name, public String $description, public Category $category, public String $ProductType, public String $productHref)
+    {
+        $this->name = $name;
+        $this->description = $description;
+        $this->type = $ProductType;
+        $this->productHref = $productHref;
+    }
+} */
+
+class FoodProduct
 {
     public function __construct(public String $name, public String $description, public Category $category, public String $ProductType, public String $productHref)
     {
@@ -12,12 +25,13 @@ class Product
     }
 }
 
-//Modello di Categoria da portare via
-class Category
+class ToyProduct
 {
-    public function __construct(public String $Name, public String $description)
+    public function __construct(public String $name, public String $description, public Category $category, public String $ProductType, public String $productHref)
     {
-        $this->name = $Name;
+        $this->name = $name;
         $this->description = $description;
+        $this->type = $ProductType;
+        $this->productHref = $productHref;
     }
 }
