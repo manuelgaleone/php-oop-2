@@ -24,7 +24,7 @@ require_once __DIR__ . "/models/product-model.php";
 //Database di Categorie
 $Dog = new Category("Cane", "Prodotto per Cani");
 $Cat = new Category("Cat", "Prodotto per Gatti");
-$Rubit = new Category("Rubbit", "Prodotto per Conigli");
+$Rubbit = new Category("Rubbit", "Prodotto per Conigli");
 
 //Database di Prodotti da portare via
 $products = [
@@ -55,14 +55,17 @@ $products = [
             </h1>
             <div class="container">
                 <div class="row">
-                    <div class="card" style="width: 18rem;">
-                        <img src="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <?php foreach ($products as $product) : ?>
+                        <div class="card m-2" style="width: 18rem;">
+                            <img src="<?php echo $product->productHref ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $product->name ?></h5>
+                                <h3><?php echo $product->$category ?></h3>
+                                <h4><?php echo $product->ProductType ?></h4>
+                                <p class="card-text"><?php echo $product->description ?></p>
+                            </div>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
