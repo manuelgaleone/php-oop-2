@@ -21,8 +21,17 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
 
 require_once __DIR__ . "/models/product-model.php";
 
-$superGatto = new Product("Super Cibo per Gatti", "Il nostro super cibo è davvero spaziale, provalo! Ceh, il tuo gatto dico.", "Cibo per Gatti", "Cibo");
-$superGioco = new Product("Super Gioco per Cani", "Il nostro super gioco è davvero divertentissimo, provalo! Ceh, il tuo cane dico.", "Gioco per Cani", "Gioco");
+//Database di Categorie
+$Dog = new Category("Cane", "Prodotto per Cani");
+$Cat = new Category("Cat", "Prodotto per Gatti");
+$Rubit = new Category("Rubbit", "Prodotto per Conigli");
+
+//Database di Prodotti da portare via
+$products = [
+    $SuperConiglio = new Product("Super Cibo Conigliesco", "Ottimo cibo conigliesco, super.", $Dog, "Cibo", "https://arcaplanet.vtexassets.com/arquivos/ids/224338/virtus-rustic-cane-adult.jpg?v=1757258609"),
+    $Gattissimo = new Product("Gattissimo 2x1", "Il gioco che il tuo gatto amerà!", $Cat, "Gioco", "https://arcaplanet.vtexassets.com/arquivos/ids/207398/Kong-Dotz-Circle-Small.jpg?v=1757249547"),
+    $SuperConiglio = new Product("Coniglio Amore", "Il Cibo che il tuo coniglio amerà!", $Rubbit, "Cibo", "https://arcaplanet.vtexassets.com/arquivos/ids/270797/Monge-All-Breeds-Adult-Salmone-e-Riso-12Kg.jpg?v=1757261187")
+]
 
 ?>
 
@@ -47,7 +56,7 @@ $superGioco = new Product("Super Gioco per Cani", "Il nostro super gioco è davv
             <div class="container">
                 <div class="row">
                     <div class="card" style="width: 18rem;">
-                        <img src="https://arcaplanet.vtexassets.com/arquivos/ids/224338/virtus-rustic-cane-adult.jpg?v=1757258609" class="card-img-top" alt="Animal Product.">
+                        <img src="">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

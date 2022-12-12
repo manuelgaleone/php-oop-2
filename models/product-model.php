@@ -1,17 +1,23 @@
 <?php
 
+//Modello di Prodotto
 class Product
 {
-    public $name;
-    public $description;
-    public $category;
-    public $productType;
-
-    public function __construct($name, $description, $category, $productType)
+    public function __construct(public String $name, public String $description, public Category $category, public String $ProductType, public String $productHref)
     {
         $this->name = $name;
         $this->description = $description;
-        $this->category = $category;
-        $this->productType = $productType;
+        $this->type = $ProductType;
+        $this->productHref = $productHref;
+    }
+}
+
+//Modello di Categoria da portare via
+class Category
+{
+    public function __construct(public String $Name, public String $description)
+    {
+        $this->name = $Name;
+        $this->description = $description;
     }
 }
